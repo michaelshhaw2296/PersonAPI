@@ -1,4 +1,6 @@
-﻿using FlexeraAPI.Shared;
+﻿using FlexeraAPI.Api.Helper;
+using FlexeraAPI.Api.Models;
+using FlexeraAPI.Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +10,7 @@ namespace FlexeraAPI.Api.Services
 {
     public interface IPersonService
     {
-        IEnumerable<Person> GetAllPeople();
+        PageList<Person> GetAllPeople(PeopleParameters peopleParameters);
 
         Person GetPersonById(int personId);
 

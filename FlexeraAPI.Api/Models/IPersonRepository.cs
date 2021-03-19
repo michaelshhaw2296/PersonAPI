@@ -1,4 +1,5 @@
-﻿using FlexeraAPI.Shared;
+﻿using FlexeraAPI.Api.Helper;
+using FlexeraAPI.Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ namespace FlexeraAPI.Api.Models
 {
     public interface IPersonRepository
     {
-        IEnumerable<Person> GetAll();
+        IQueryable<Person> GetAll();
 
         Person Get(int personId);
 
